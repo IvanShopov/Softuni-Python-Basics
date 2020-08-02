@@ -1,0 +1,5 @@
+deposit = float(input())
+months = int(input())
+interest = float(input())
+total_sum = deposit + months * ((deposit * interest) /100/ 12)
+print(f"{total_sum:.2f}")
