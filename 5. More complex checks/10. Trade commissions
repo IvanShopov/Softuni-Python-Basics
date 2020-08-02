@@ -1,0 +1,42 @@
+city = str(input())
+price = float(input())
+com = 0
+if city == "Sofia" or city == "Varna" or city == "Plovdiv":
+    if price > 0:
+        if city == "Sofia":
+            if 0 < price <= 500:
+                com = 0.05
+            elif 500 < price <= 1000:
+                com = 0.07
+            elif 1000 < price <= 10000:
+                com = 0.08
+            elif price > 10000:
+                com = 0.12
+            total = price * com
+            print(f"{total:.2f}")
+        elif city == "Varna":
+            if 0 < price <= 500:
+                com = 0.045
+            elif 500 < price <= 1000:
+                com = 0.075
+            elif 1000 < price <= 10000:
+                com = 0.10
+            elif price > 10000:
+                com = 0.13
+            total = price * com
+            print(f"{total:.2f}")
+        elif city == "Plovdiv":
+            if 0 < price <= 500:
+                com = 0.055
+            elif 500 < price <= 1000:
+                com = 0.08
+            elif 1000 < price <= 10000:
+                com = 0.12
+            elif price > 10000:
+                com = 0.145
+            total = price * com
+            print(f"{total:.2f}")
+    else:
+        print("error")
+else:
+    print("error")
