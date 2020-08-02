@@ -1,0 +1,16 @@
+number_of_open_tabs = int(input())
+salary = float(input())
+for tabs in range(number_of_open_tabs):
+    tab = input()
+    if tab == "Facebook":
+        salary -= 150
+    elif tab == "Instagram":
+        salary -= 100
+    elif tab == "Reddit":
+        salary -= 50
+    if salary <= 0:
+        break
+if salary > 0:
+    print(int(salary))
+else:
+    print("You have lost your salary.")
