@@ -1,0 +1,4 @@
+dogs=int(input())
+other_animals=int(input())
+needed_money=dogs*2.5+other_animals*4
+print(f"{needed_money:.2f} lv.")
