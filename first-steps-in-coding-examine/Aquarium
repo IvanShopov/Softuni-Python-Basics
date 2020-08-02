@@ -1,0 +1,7 @@
+length = int(input())
+width = int(input())
+height = int(input())
+percent_of_occupied_volume = float(input())
+aquarium_volume = (length * width * height) * 0.001
+aquarium_volume -= aquarium_volume * percent_of_occupied_volume / 100
+print(aquarium_volume)
