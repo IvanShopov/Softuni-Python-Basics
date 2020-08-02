@@ -1,0 +1,12 @@
+days = int(input())
+ cookers = int(input())
+ cakes = int(input())
+ waffles = int(input())
+ pancakes = int(input())
+ cakes_price = 45
+ waffles_price = 5.80
+ pancakes_price = 3.2
+ incoming = days * cookers * (cakes * cakes_price + waffles * waffles_price + pancakes * pancakes_price)
+ outcoming=incoming/8
+ final_sum= incoming - outcoming
+ print(f"{final_sum:.2f}")
