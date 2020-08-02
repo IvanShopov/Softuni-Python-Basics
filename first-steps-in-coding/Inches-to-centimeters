@@ -1,0 +1,4 @@
+cm = float(input())
+inch=2.54
+cm_to_inches=cm*inch
+print(cm_to_inches)
