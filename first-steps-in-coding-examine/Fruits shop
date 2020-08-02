@@ -1,0 +1,10 @@
+strawberry_price = float(input())
+quantity_of_bananas = float(input())
+quantity_of_oranges = float(input())
+quantity_of_raspberries = float(input())
+quantity_of_strawberries = float(input())
+raspberries_price = strawberry_price / 2
+oranges_price = raspberries_price * 0.6
+bananas_price = raspberries_price * 0.2
+needed_money = quantity_of_bananas * bananas_price + quantity_of_oranges * oranges_price + quantity_of_raspberries * raspberries_price + quantity_of_strawberries * strawberry_price
+print(needed_money)
