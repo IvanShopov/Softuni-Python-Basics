@@ -1,0 +1,11 @@
+hours = int(input())
+minutes = int(input())
+total_time_in_minutes_after_15_minutes = hours * 60 + minutes + 15
+hours_after_15_minutes = total_time_in_minutes_after_15_minutes // 60
+minutes_after_15_minutes = total_time_in_minutes_after_15_minutes - hours_after_15_minutes * 60
+if hours_after_15_minutes > 23:
+    hours_after_15_minutes -= 24
+if minutes_after_15_minutes <= 9:
+    print(f"{hours_after_15_minutes}:0{minutes_after_15_minutes}")
+else:
+    print(f"{hours_after_15_minutes}:{minutes_after_15_minutes}")
