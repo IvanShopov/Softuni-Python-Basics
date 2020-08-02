@@ -1,0 +1,20 @@
+number = float(input())
+incoming_size = input()
+outcoming_size = input()
+converted_number = 0
+if incoming_size == "mm":
+    if outcoming_size == "cm":
+        converted_number = number / 10
+    elif outcoming_size == "m":
+        converted_number = number / 1000
+elif incoming_size == "cm":
+    if outcoming_size == "mm":
+        converted_number = number * 10
+    elif outcoming_size == "m":
+        converted_number = number / 100
+elif incoming_size == "m":
+    if outcoming_size == "mm":
+        converted_number = number * 1000
+    elif outcoming_size == "cm":
+        converted_number = number * 100
+print(f"{converted_number:.3f}")
