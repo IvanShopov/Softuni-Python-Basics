@@ -1,0 +1,15 @@
+number = int(input())
+for numbers in range(1111, 10000):
+    numbers = str(numbers)
+    isMagic = True
+    for digit in numbers:
+        digit = int(digit)
+        if digit == 0:
+            isMagic = False
+            break
+        else:
+            if number % digit != 0:
+                isMagic = False
+                break
+    if isMagic:
+        print(f"{numbers}", end=" ")
