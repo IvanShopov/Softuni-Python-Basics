@@ -1,0 +1,27 @@
+budget = float(input())
+money_in_hand = float(input())
+total_days = 0
+spend_counter = 0
+too_many_days_spend = False
+while True:
+    command = input()
+    money = float(input())
+    total_days += 1
+    if command == "spend":
+        spend_counter += 1
+        money_in_hand -= money
+        if money_in_hand < 0:
+            money_in_hand = 0
+        if spend_counter == 5:
+            too_many_days_spend = True
+            break
+    elif command == "save":
+        spend_counter = 0
+        money_in_hand += money
+        if money_in_hand >= budget:
+            break
+if too_many_days_spend:
+    print("You can't save the money.")
+    print(f"{total_days}")
+else:
+    print(f"You saved the money for {total_days} days.")
