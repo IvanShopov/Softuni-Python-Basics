@@ -1,0 +1,22 @@
+sum = float(input())
+coins_counter = 0
+sum_as_int = int(sum * 100)
+while True:
+    coins_counter += sum_as_int // 200
+    sum_as_int -= sum_as_int // 200 * 200
+    coins_counter += sum_as_int // 100
+    sum_as_int -= sum_as_int // 100 * 100
+    coins_counter += sum_as_int // 50
+    sum_as_int -= sum_as_int // 50 * 50
+    coins_counter += sum_as_int // 20
+    sum_as_int -= sum_as_int // 20 * 20
+    coins_counter += sum_as_int // 10
+    sum_as_int -= sum_as_int // 10 * 10
+    coins_counter += sum_as_int // 5
+    sum_as_int -= sum_as_int // 5 * 5
+    coins_counter += sum_as_int // 2
+    sum_as_int -= sum_as_int // 2 * 2
+    if sum_as_int > 0:
+        coins_counter += 1
+    break
+print(int(coins_counter))
