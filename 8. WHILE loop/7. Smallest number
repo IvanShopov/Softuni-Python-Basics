@@ -1,0 +1,9 @@
+min_number = 0
+number = input()
+if number != "Stop":
+    min_number = int(number)
+while number != "Stop":
+    if int(number) < min_number:
+        min_number = int(number)
+    number = input()
+print(min_number)
