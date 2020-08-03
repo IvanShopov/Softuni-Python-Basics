@@ -1,0 +1,9 @@
+import sys
+max_number = -sys.maxsize
+number = input()
+while number != "Stop":
+    if int(number) > max_number:
+        max_number = int(number)
+    number = input()
+if max_number != -sys.maxsize:
+    print(max_number)
