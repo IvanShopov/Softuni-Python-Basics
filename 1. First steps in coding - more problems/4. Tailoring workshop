@@ -1,0 +1,12 @@
+number_of_tables = int(input())
+tables_length = float(input())
+tables_width = float(input())
+usd = 1.85
+cover_area = (tables_length + 2 * 0.3) * (tables_width + 2 * 0.3)
+square_area = (tables_length / 2) * (tables_length / 2)
+covers_price_in_usd = number_of_tables * cover_area * 7
+squares_price_in_usd = number_of_tables * square_area * 9
+total_price_in_usd = covers_price_in_usd + squares_price_in_usd
+total_price_in_bgn = total_price_in_usd * usd
+print(f"{total_price_in_usd:.2f} USD")
+print(f"{total_price_in_bgn:.2f} BGN")
