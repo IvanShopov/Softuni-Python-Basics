@@ -1,0 +1,13 @@
+total_sum = 0
+payment = 0
+command = input()
+while command != "NoMoreMoney":
+    payment = float(command)
+    if payment < 0:
+        print("Invalid operation!")
+        break
+    else:
+        total_sum += payment
+        print(f"Increase: {payment:.2f}")
+    command = input()
+print(f"Total: {total_sum:.2f}")
