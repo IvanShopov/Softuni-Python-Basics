@@ -1,0 +1,26 @@
+max_bad_values = int(input())
+count_of_bad_values = max_bad_values
+problem_name = ""
+problems_counter = 0
+success = 0
+middle_success = 0
+too_many_bad_values = False
+command = input()
+while command != "Enough":
+    problem_name = command
+    success = float(input())
+    middle_success += success
+    problems_counter += 1
+    if success <= 4:
+        count_of_bad_values -= 1
+        if count_of_bad_values == 0:
+            too_many_bad_values = True
+            break
+    command = input()
+if too_many_bad_values:
+    print(f"You need a break, {max_bad_values} poor grades.")
+else:
+    middle_success /= problems_counter
+    print(f"Average score: {middle_success:.2f}")
+    print(f"Number of problems: {problems_counter}")
+    print(f"Last problem: {problem_name}")
