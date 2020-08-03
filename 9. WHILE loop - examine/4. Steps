@@ -1,0 +1,21 @@
+target_steps = 10000
+target_reached = False
+made_steps = 0
+command = input()
+while command != "Going home":
+    daily_steps = int(command)
+    made_steps += daily_steps
+    if made_steps >= target_steps:
+        break
+    command = input()
+if command == "Going home":
+    daily_steps = int(input())
+    made_steps += daily_steps
+if made_steps >= target_steps:
+    target_reached = True
+difference = abs(made_steps - target_steps)
+if target_reached:
+    print("Goal reached! Good job!")
+    print(f"{difference} steps over the goal!")
+else:
+    print(f"{difference} more steps to reach goal.")
