@@ -1,0 +1,9 @@
+import sys
+min_number = sys.maxsize
+number = input()
+while number != "Stop":
+    if int(number) < min_number:
+        min_number = int(number)
+    number = input()
+if min_number != -sys.maxsize:
+    print(min_number)
