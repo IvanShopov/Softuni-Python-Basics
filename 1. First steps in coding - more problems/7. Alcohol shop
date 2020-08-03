@@ -1,0 +1,10 @@
+whiskey_price = float(input())
+quantity_of_beer = float(input())
+quantity_of_wine = float(input())
+quantity_of_brandy = float(input())
+quantity_of_whiskey = float(input())
+brandy_price = whiskey_price / 2
+wine_price = brandy_price * 0.6
+beer_price = brandy_price * 0.2
+needed_money = quantity_of_whiskey * whiskey_price + quantity_of_beer * beer_price + quantity_of_wine * wine_price + quantity_of_brandy * brandy_price
+print(f"{needed_money:.2f}")
