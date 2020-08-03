@@ -1,0 +1,38 @@
+command = input()
+total_tickets_counter = 0
+total_students_tickets_counter = 0
+total_standard_tickets_counter = 0
+total_kid_tickets_counter = 0
+while command != "Finish":
+    movie_name = command
+    tickets_for_sale = int(input())
+    sold_tickets = 0
+    student_tickets = 0
+    standard_tickets = 0
+    kid_tickets = 0
+    while sold_tickets < tickets_for_sale:
+        type_of_ticket = input()
+        if type_of_ticket == "End":
+            break
+        else:
+            total_tickets_counter += 1
+            sold_tickets += 1
+            if type_of_ticket == "student":
+                student_tickets += 1
+                total_students_tickets_counter += 1
+            elif type_of_ticket == "standard":
+                standard_tickets += 1
+                total_standard_tickets_counter += 1
+            elif type_of_ticket == "kid":
+                kid_tickets += 1
+                total_kid_tickets_counter += 1
+    filled_place = (student_tickets + standard_tickets + kid_tickets) / tickets_for_sale * 100
+    print(f"{movie_name} - {filled_place:.2f}% full.")
+    command = input()
+percent_of_student_tickets = total_students_tickets_counter / total_tickets_counter * 100
+percent_of_standard_ticekts = total_standard_tickets_counter / total_tickets_counter * 100
+percent_of_kid_tickets = total_kid_tickets_counter / total_tickets_counter * 100
+print(f"Total tickets: {total_tickets_counter}")
+print(f"{percent_of_student_tickets:.2f}% student tickets.")
+print(f"{percent_of_standard_ticekts:.2f}% standard tickets.")
+print(f"{percent_of_kid_tickets:.2f}% kids tickets.")
