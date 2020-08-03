@@ -1,0 +1,19 @@
+student_name = input()
+fails = 0
+grade = 1
+success = 0
+middle_success = 0
+while grade <= 12:
+    success = float(input())
+    if success < 4:
+        fails += 1
+        if fails > 1:
+            break
+    else:
+        middle_success += success
+        grade += 1
+if fails > 1:
+    print(f"{student_name} has been excluded at {grade} grade")
+else:
+    middle_success /= 12
+    print(f"{student_name} graduated. Average grade: {middle_success:.2f}")
