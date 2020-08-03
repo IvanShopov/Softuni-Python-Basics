@@ -1,0 +1,7 @@
+sum = int(input())
+number = 0
+sum_of_numbers = 0
+while sum > sum_of_numbers:
+    number = int(input())
+    sum_of_numbers += number
+print(sum_of_numbers)
