@@ -1,0 +1,17 @@
+jury = int(input())
+final_middle_grade = 0
+count_of_all_grades = 0
+command = input()
+while command != "Finish":
+    examine_name = command
+    examine_middle_grade = 0
+    for grades in range(jury):
+        grade = float(input())
+        examine_middle_grade += grade
+    examine_middle_grade = examine_middle_grade / jury
+    print(f"{examine_name} - {examine_middle_grade:.2f}.")
+    final_middle_grade += examine_middle_grade
+    count_of_all_grades += 1
+    command = input()
+final_middle_grade /= count_of_all_grades
+print(f"Student's final assessment is {final_middle_grade:.2f}.")
