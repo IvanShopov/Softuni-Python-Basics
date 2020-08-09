@@ -1,0 +1,11 @@
+# Problem link - https://softuni.bg/downloads/svn/programming-basics/Resources/EXAMS-2020/Exam-Version-Two/02.%20Cat%20Walking.docx
+
+minutes = int(input())
+daily_walks = int(input())
+calories_received = int(input())
+spent_calories = minutes * 5 * daily_walks
+total_calories = calories_received - spent_calories
+if total_calories <= calories_received / 2:
+    print(f"Yes, the walk for your cat is enough. Burned calories per day: {spent_calories}.")
+else:
+    print(f"No, the walk for your cat is not enough. Burned calories per day: {spent_calories}.")
