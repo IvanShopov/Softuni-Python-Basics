@@ -1,0 +1,16 @@
+# Problem link - https://softuni.bg/downloads/svn/programming-basics/Resources/EXAMS-2020/Exam-Version-Two/05.%20Care%20of%20Puppy%20.docx
+
+bought_food = int(input())
+bought_food *= 1000
+command = ""
+while command != "Adopted":
+    command = input()
+    if command == "Adopted":
+        break
+    else:
+        eaten_food = int(command)
+        bought_food -= eaten_food
+if bought_food >= 0:
+    print(f"Food is enough! Leftovers: {bought_food} grams.")
+else:
+    print(f"Food is not enough. You need {abs(bought_food)} grams more.")
