@@ -1,0 +1,9 @@
+# Problem link - https://softuni.bg/downloads/svn/programming-basics/Resources/EXAMS-2020/Exam-Version-Two/01.%20Supplies%20for%20School.docx
+
+pens=int(input())
+markers=int(input())
+liters=float(input())
+discount=int(input())
+total=pens*5.80+markers*7.2+liters*1.2
+total-=discount*total/100
+print(f"{total:.3f}")
