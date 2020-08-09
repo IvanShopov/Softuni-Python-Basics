@@ -1,0 +1,32 @@
+# Problem link - https://softuni.bg/downloads/svn/programming-basics/Resources/EXAMS-2020/Exam-Version-Two/03.%20Energy%20Booster.docx
+
+fruit = input()
+size = input()
+ordered_sets = int(input())
+total_price = 0.00
+if fruit == "Watermelon":
+    if size == "small":
+        total_price += 2 * 56
+    else:
+        total_price += 5 * 28.7
+elif fruit == "Mango":
+    if size == "small":
+        total_price += 2 * 36.66
+    else:
+        total_price += 5 * 19.6
+elif fruit == "Pineapple":
+    if size == "small":
+        total_price += 2 * 42.10
+    else:
+        total_price += 5 * 24.80
+elif fruit == "Raspberry":
+    if size == "small":
+        total_price += 2 * 20
+    else:
+        total_price += 5 * 15.20
+total_price *= ordered_sets
+if 400 <= total_price <= 1000:
+    total_price *= 0.85
+elif total_price > 1000:
+    total_price *= 0.5
+print(f"{total_price:.2f} lv.")
