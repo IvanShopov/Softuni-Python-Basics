@@ -1,0 +1,33 @@
+# Problem link - https://softuni.bg/downloads/svn/programming-basics/Resources/EXAMS-2020/Exam-Version-Two/06.%20Tournament%20of%20Christmas%20.docx
+
+days = int(input())
+command = ""
+total_money = 0
+total_won_games = 0
+total_lost_games = 0
+won_games = 0
+lost_games = 0
+daily_money = 0
+for days_played in range(days):
+    daily_money = 0
+    command = input()
+    won_games = 0
+    lost_games = 0
+    while command != "Finish":
+        win_or_lose = input()
+        if win_or_lose == "win":
+            daily_money += 20
+            won_games += 1
+            total_won_games += 1
+        else:
+            lost_games += 1
+            total_lost_games += 1
+        command = input()
+    if won_games > lost_games:
+        daily_money *= 1.1
+    total_money += daily_money
+if total_won_games > total_lost_games:
+    total_money *= 1.2
+    print(f"You won the tournament! Total raised money: {total_money:.2f}")
+else:
+    print(f"You lost the tournament! Total raised money: {total_money:.2f}")
